@@ -1,21 +1,27 @@
-
+     ion-header{
+         height: 100px;
+     }
+     ion-title{
+         font-size: 21px;
+     }
     ion-item{
         --background: transparentize($color: #000000, $amount: 0);
     
     }
-    ion-content{
+    ion-content.menu{
         --background: linear-gradient(to top, rgb(132, 179, 255) 0%, #fff 100%);
     }
   
     .logo{
-        margin-top: 20px;
+        margin-top: 5px;
         width: 150px;
         height: 150px;
     }
     .encabezado{
-        width: 45px;
-        height: 55px;
-        margin-top: 10px;
+        width: 75px;
+        height: 68px;
+        
+       
     }
     .piefondo{
         margin-top: 10px;
@@ -29,7 +35,7 @@
     ion-content {
         text-align: center;
     }
-    a {
+    .a {
         text-decoration: none; 
     }
     ion-row {
