@@ -21,17 +21,12 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Clases',
-      url: '/folder/Spam',
+      url: 'clases',
       icon: 'book'
     },
     {
-      title: 'Videos',
-      url: '/folder/Favorites',
-      icon: 'film'
-    },
-    {
       title: 'Simulador',
-      url: '/folder/Archived',
+      url: 'simulador',
       icon: 'easel'
     },
     {
@@ -41,12 +36,12 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Contactenos',
-      url: '/folder/Spam',
+      url: 'contactenos',
       icon: 'mail'
     },
     {
       title: 'Salir',
-      url: '/folder/Spam',
+      url: 'login',
       icon: 'power'
     }
   ];

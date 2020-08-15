@@ -1,15 +1,9 @@
-    ion-title{
-        text-align: center;
-        margin-top: 20px;
-    }
-    ion-header img {
-        float:right;
-    }
+
     ion-item{
         --background: transparentize($color: #000000, $amount: 0);
     
     }
-    ion-content.menu{
+    ion-content{
         --background: linear-gradient(to top, rgb(132, 179, 255) 0%, #fff 100%);
     }
   

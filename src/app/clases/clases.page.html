@@ -1,9 +1,68 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>clases</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> 
+      <ion-title>Clases</ion-title>   
+    </ion-buttons>    
+    <div align="right"><img  class=encabezado src="assets/imagen/diente.png" ></div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" placeholder="Buscar lección"></ion-searchbar>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Leccion 1</ion-card-subtitle>
+      <ion-card-title>Colocación y mantenimiento de aparatos de ortodoncia removible</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Los aparatos removibles están diseñados para quitarse todos los días y no pueden utilizarse de forma continuada.
+Salvo indicación expresa por el Ortodoncista, no puede masticar ningún alimento mientras se utilice.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Leccion 1</ion-card-subtitle>
+      <ion-card-title>Protesis dentales</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      En la rehabilitación oral se implementan prótesis dentales de diferentes tipos, tales como fijas o removibles, 
+      para reemplazar pérdidas de dientes o dientes sin estética.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Leccion 1</ion-card-subtitle>
+      <ion-card-title>Férulas dentales</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      La férula dental se fabrica a medida y se coloca en las arcadas (superior y/o inferior) 
+      de la boca para tratar determinadas situaciones.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-content class="sub-menu">
+   <ion-tabs>
+    <ion-tab-bar slot="bottom">  
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="document"></ion-icon>
+        <ion-label>Guías</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="map" routerLink="/video">
+        <ion-icon name="videocam"></ion-icon>
+        <ion-label>Videos</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+   </ion-tabs>
+  </ion-content>
 
 </ion-content>

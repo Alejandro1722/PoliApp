@@ -24,9 +24,25 @@ const routes: Routes = [
     loadChildren: () => import('./q-somos/q-somos.module').then( m => m.QSomosPageModule)
   },
   {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
     path: 'video',
     loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
-  }
+  },
+  {
+    path: 'contactenos',
+    loadChildren: () => import('./contactenos/contactenos.module').then( m => m.ContactenosPageModule)
+  },
+  {
+    path: 'simulador',
+    loadChildren: () => import('./simulador/simulador.module').then( m => m.SimuladorPageModule)
+  },
+  {
+    path: 'clases',
+    loadChildren: () => import('./clases/clases.module').then( m => m.ClasesPageModule)
+  },
 ];
 
 @NgModule({
