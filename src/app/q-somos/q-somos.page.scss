@@ -1,3 +1,38 @@
-.perro{
-    --background: linear-gradient(to top, #428cff 0%, #fff 100%);
+.encabezado{
+    width: 45px;
+    height: 55px;
+    margin-top: 10px;
+}
+ion-content{
+    --background: linear-gradient(to top, rgb(132, 179, 255) 0%, #fff 100%);
+}
+.footer {
+    height: 70px; 
+}
+ion-item{
+--background: transparentize($color: #000000, $amount: 0);
+}
+.pie{
+font-size: 10px;
+color: black;
+}
+
+.piefondo{
+margin-top: 10px;
+width: 30px;
+height: 30px;
+}
+ion-tab-button.foot{
+background-color:#005a9b;
+}
+ion-img.mapa{
+    color: blue;
+    position: center;
+    align-content: center;
+}
+
+ion-item class.map{
+    position:center;
+    align-content: center;
+    text-align: center;
 }

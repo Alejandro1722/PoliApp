@@ -1,9 +1,67 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>q-somos</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> 
+      <ion-title>¿Quienes somos?</ion-title>   
+    </ion-buttons>    
+    <div align="right"><img  class=encabezado src="assets/imagen/diente.png" ></div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="perro">
+<STYLE>A {text-decoration: none;} </STYLE>
 
+
+<ion-content>
+  <ion-item>
+  <ion-img src="assets/imagen/calidad.jpg"> </ion-img>
+  </ion-item>
+
+<ion-card>
+  <ion-item>
+    <ion-card-content>
+      <h1>¿Quienes somos?</h1> <br>
+      <p> Somos un grupo por empresarios que creen en Colombia, deseosos de retribuir a la sociedad y al país los rendimientos económicos originados por sus actividades. El Politécnico Internacional es una Institución de Educación Superior constituida como una fundación privada sin ánimo de lucro, la cual contribuye a la formación integral de la juventud colombiana, para hacer realidad sus sueños a través de la empleabilidad o el emprendimiento.
+        <br>
+        Es una Institución comprometida con el desarrollo laboral de sus egresados y es reconocida por las destacadas competencias prácticas y por los altos estándares de calidad y servicio que desarrolla en sus estudiantes; los cuales tienen una gran acogida en el sector productivo.
+    </p></ion-card-content>
+  </ion-item>
+<ion-item>
+  <ion-card-content>
+    <h1>Lo que nos diferencia</h1> <br>
+    <p> Decentralizado, la ubicación estratégica de nuestras cuatro sedes facilita a los jóvenes poder ir a estudiar sin incurrir en mayores gastos, debido a la cercanía de estas a sus lugares de vivienda o trabajo. Desde el 2019 implementamos nuestra modalidad virtual, dando más cobertura y llegando a más personas a nivel nacional.
+      </p>
+    </ion-card-content>
+  </ion-item>
+<ion-item>
+  <ion-card-content>
+    <ion-img src="assets/imagen/mapa.jpg"> </ion-img>
+    </ion-card-content>
+</ion-item>
+</ion-card>
+<ion-content class="footer" [fullscreen]="true">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom"> 
+      <a href="https://www.facebook.com/politecnicointernacionalcolombia">
+        <ion-tab-button tab="facebook">
+        <ion-icon name="logo-facebook"></ion-icon>
+         <ion-label>Facebook</ion-label>
+      </ion-tab-button></a>
+      <a href="https://www.instagram.com/politecnicoin"> 
+      <ion-tab-button tab="instagram">
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-label>Instagram</ion-label>
+      </ion-tab-button></a>
+
+      <a href="https://twitter.com/PolitecnicoIn?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+      <ion-tab-button tab="twitter">
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-label>Twitter</ion-label>
+      </ion-tab-button></a>
+  
+      <ion-tab-button class="foot" tab="about">
+        <a  href="https://politecnicointernacional.edu.co/sw/es/home"><ion-img src="assets/imagen/footer-somos.png"> </ion-img> </a>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+ </ion-content>
 </ion-content>
