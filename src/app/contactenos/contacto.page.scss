@@ -1,0 +1,43 @@
+.encabezado{
+    width: 75px;
+    height: 68px;
+}
+ion-header{
+    height: 100px;
+}
+ion-title{
+    font-size: 21px;
+}
+ion-content{
+    --background: linear-gradient(to top, rgb(132, 179, 255) 0%, #fff 100%);
+}
+.piefondo{
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+.pie{
+    font-size: 10px;
+    color: black;
+}
+ion-item{
+    
+    --background: transparentize($color: #000000, $amount: 0);
+}
+ion-icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 9px;
+}
+ion-footer.piepagina{
+    background: linear-gradient(to top, rgb(132, 179, 255) 100%, #fff 0%);
+}
+.Guardar {
+    margin-top: 20px;
+    font-size: 14px;
+    background-color: #428cff;
+    padding: 10px 10px;
+    color: white; 
+    border-radius: 4px;
+  
+  }
