@@ -1,0 +1,71 @@
+<ion-header   [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Contacto</ion-title> 
+    </ion-buttons>    
+    <div align="right">
+      <img  class=encabezado src="assets/imagen/imagen1.png" >
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-item lines="full">
+    <ion-label position="floating">Nombre & Apellido</ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full" >
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Telefono</ion-label>
+    <ion-input type="numeric" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Comentario</ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+  <div padding align="center">
+    <button ion-button block type="submit" class="Guardar">Enviar</button>
+  </div>
+  <ion-text align="center">
+    <h1>¿NESECITAS AYUDA?</h1>
+    <p>
+      Tenemos a tu disposición canales para que resuelvas tus dudas, ¡contáctanos!:
+    </p>
+    <div align="center">
+      <ion-icon  name="mail-open-outline"></ion-icon>
+      <p>Correo Electronico</p>
+      <a [routerLink]="['']" class="small-text">info_admisiones@pi.edu.co</a>
+    </div>
+    <div align="center">
+      <ion-icon name="chatbubbles-outline"></ion-icon>
+    </div>
+    <div align="center">
+      <a [routerLink]="['']" class="small-text">Escribenos ></a>
+    </div>
+    <div align="center">
+      <ion-icon name="call-outline"></ion-icon>
+    </div>   
+    <div>
+    <ion-button color="danger"> (571) 400 5700</ion-button>
+    </div>
+    
+  </ion-text>
+</ion-content>
+
+
+<ion-footer class="piepagina">
+  <div padding align="center">
+    <img  class=piefondo src="assets/imagen/footer.png" >
+  </div>
+  <div align="center" class="pie">
+    <p >Derechos Reservados</p>
+  </div>
+  
+</ion-footer>
