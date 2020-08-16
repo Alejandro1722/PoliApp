@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Quienes Somos',
-      url: '/',
+      url: '/q-somos',
       icon: 'chatbubble-ellipses'
     },
     {

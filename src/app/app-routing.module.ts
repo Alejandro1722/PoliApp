@@ -32,10 +32,6 @@ const routes: Routes = [
     loadChildren: () => import('./contacto/contacto.module').then( m => m.ContactoPageModule)
   },
   {
-    path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
-  },
-  {
     path: 'clases',
     loadChildren: () => import('./clases/clases.module').then( m => m.ClasesPageModule)
   }
