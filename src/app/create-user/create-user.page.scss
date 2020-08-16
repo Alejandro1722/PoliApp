@@ -1,9 +1,3 @@
-ion-header{
-  height: 100px;
-}
-ion-title{
-  font-size: 21px;
-}
 
  .encabezado{
   width: 75px;
@@ -17,7 +11,7 @@ ion-title{
   ion-item{
     --background: transparentize($color: #000000, $amount: 0);
   }
-  .pie{
+.pie{
     font-size: 10px;
     color: black;
 }
