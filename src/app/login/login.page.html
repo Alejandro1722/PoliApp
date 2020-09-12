@@ -1,14 +1,3 @@
-<ion-header   [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-      <ion-title>Bienvenido</ion-title>  
-    </ion-buttons>     
-    <div align="right">
-      <img  class=encabezado src="assets/imagen/imagen1.png" >
-    </div>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content class="menu" [fullscreen]="true">
   <div padding align="center">
@@ -17,19 +6,28 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required [(ngModel)]="user.email" name="email" ></ion-input>
     </ion-item>
 
     <ion-item lines="full" >
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" required [(ngModel)]="user.password" name="password" ></ion-input>
     </ion-item>
     <br>
       <ion-row>
         <ion-col>
-          <ion-button type="submit" class="ingresar">Ingresar</ion-button>
+          <ion-button type="submit" class="ingresar" (click)="onLogin()" >Ingresar</ion-button>       
         </ion-col>
       </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button class="google" (click)="loginGoogle()">
+            <ion-icon name="logo-google"></ion-icon>
+          </ion-button>       
+        </ion-col>
+      </ion-row>
+
   </form>
   <br>
   <a [routerLink]="['/create-user']" class="small-text">¿No Tienes Cuenta?  Registrate!</a>

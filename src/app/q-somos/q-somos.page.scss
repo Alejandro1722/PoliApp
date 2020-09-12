@@ -1,6 +1,10 @@
 .encabezado{
     width: 75px;
     height: 68px; 
+    z-index: 10; 
+}
+.cerrar {
+    position: absolute; 
 }
 ion-content{
     --background: linear-gradient(to top, rgb(132, 179, 255) 0%, #fff 100%);

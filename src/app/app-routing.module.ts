@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    
   },
   {
     path: 'folder',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'create-user',
@@ -21,19 +24,23 @@ const routes: Routes = [
   },
   {
     path: 'q-somos',
-    loadChildren: () => import('./q-somos/q-somos.module').then( m => m.QSomosPageModule)
+    loadChildren: () => import('./q-somos/q-somos.module').then( m => m.QSomosPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'video',
-    loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
+    loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'contacto',
-    loadChildren: () => import('./contacto/contacto.module').then( m => m.ContactoPageModule)
+    loadChildren: () => import('./contacto/contacto.module').then( m => m.ContactoPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'clases',
-    loadChildren: () => import('./clases/clases.module').then( m => m.ClasesPageModule)
+    loadChildren: () => import('./clases/clases.module').then( m => m.ClasesPageModule),
+    canActivate: [AuthGuard]
   }
   
 ];
