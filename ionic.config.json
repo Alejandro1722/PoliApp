@@ -1,5 +1,7 @@
 {
   "name": "simuladorPoli",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
