@@ -1,0 +1,32 @@
+
+ion-item{
+    --background: transparentize($color: #000000, $amount: 0);
+}
+ion-content{
+    --background: linear-gradient(to top, rgb(132, 179, 255) 0%, #fff 100%);
+}
+
+.logo{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+}
+.encabezado{
+    width: 75px;
+    height: 68px; 
+}
+.piefondo{
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+.pie{
+    font-size: 10px;
+    color: black;
+}
+ion-content {
+    text-align: center;
+}
+.sub-menu {
+    height: 50px;
+}
