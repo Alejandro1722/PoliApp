@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Router } from '@angular/router';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-root',
@@ -12,21 +15,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [   
-    
+       
     {
-      title: 'Perfil',
-      url: '/perfil',
-      icon: 'body'
-    },
-    {
-      title: 'Lecciones',
+      title: 'Guías',
       url: '/clases',
       icon: 'book'
     },
     {
       title: 'Videos',
       url: '/video',
-      icon: 'mail'
+      icon: 'videocam'
     },
     {
       title: 'Simulador',
@@ -42,19 +40,16 @@ export class AppComponent implements OnInit {
       title: 'Contactenos',
       url: '/contacto',
       icon: 'mail'
-    },
-
-    {
-      title: 'Salir',
-      url: '/login',
-      icon: 'power'
-    }
+    },  
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private router: Router, 
+    private afAuth: AngularFireAuth, 
+    private google: GooglePlus
   ) {
     this.initializeApp();
   }
@@ -71,5 +66,11 @@ export class AppComponent implements OnInit {
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+  }
+  onLogout(){
+    console.log('Logout!');
+    this.afAuth.auth.signOut(); 
+    this.google.disconnect(); 
+    this.router.navigateByUrl('/login');
   }
 }

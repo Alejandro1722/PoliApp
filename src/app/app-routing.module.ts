@@ -8,12 +8,7 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full',
     
-  },
-  {
-    path: 'folder',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule),
-    canActivate: [AuthGuard]
-  },
+  },  
   {
     path: 'create-user',
     loadChildren: () => import('./create-user/create-user.module').then( m => m.CreateUserPageModule)
@@ -41,8 +36,12 @@ const routes: Routes = [
     path: 'clases',
     loadChildren: () => import('./clases/clases.module').then( m => m.ClasesPageModule),
     canActivate: [AuthGuard]
-  }
+  },   {
+    path: 'simulador',
+    loadChildren: () => import('./simulador/simulador.module').then( m => m.SimuladorPageModule)
+  },
   
+ 
 ];
 
 @NgModule({

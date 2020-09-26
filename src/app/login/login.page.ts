@@ -21,6 +21,7 @@ import { User } from '../shared/user.class';
       this.router.navigateByUrl('/q-somos');
     }
   }
+  
   async loginGoogle(){
     this.authSvc.loginWithGoogle().then(() => {
       this.router.navigateByUrl('/q-somos');
@@ -28,6 +29,14 @@ import { User } from '../shared/user.class';
       alert("Los datos son incorrectos o no existe el usuario");
     })
 
+    }
+
+    async oginFacebook(){
+      this.authSvc.loginWithFacebook().then(res => {
+        this.router.navigate(['/q-somos']);
+      }).catch(err => {
+        alert('hubo un error');
+      })
     }
 }
 

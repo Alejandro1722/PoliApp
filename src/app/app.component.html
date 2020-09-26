@@ -10,11 +10,48 @@
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list> 
+            </ion-item>          
+          </ion-menu-toggle>       
+        </ion-list>
+        
+        <ion-item (click)="onLogout()" lines="none" detail="false">
+          <ion-icon slot="start" name="log-out-outline" ></ion-icon>
+          <ion-label>Cerrar sesión</ion-label>        
+        </ion-item>
+        
+        <ion-menu-toggle class="botones">
+  
+          <a class= "botton" href="https://twitter.com/PolitecnicoIn?s=09">
+          <ion-button>
+          <ion-icon name="logo-tumblr"></ion-icon>
+        </ion-button>
+        </a> 
+        
+        <a class= "botton" href="https://politecnicointernacional.edu.co/sw/">
+          <ion-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        </a>
+        
+        <a class= "botton" href="https://instagram.com/politecnicoin?igshid=q8hedksjl8iw">
+          <ion-button>
+          <ion-icon name="logo-instagram"></ion-icon>
+        </ion-button>
+        </a>
+        
+        <a class= "botton" href="https://api.whatsapp.com/send?phone=12054798255&text=Hola&source=&data=&app_absent=">
+          <ion-button>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </ion-button>
+        </a>
+        
+        </ion-menu-toggle>      
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
+
 </ion-app>
+
+

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; 
-import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from '../services/auth.service';
-import { GooglePlus } from '@ionic-native/google-plus/ngx';
+
 
 @Component({
   selector: 'app-q-somos',
@@ -11,15 +9,9 @@ import { GooglePlus } from '@ionic-native/google-plus/ngx';
 })
 export class QSomosPage implements OnInit {
 
-  constructor(private authSvc: AuthService, private router: Router, private afAuth: AngularFireAuth, private google: GooglePlus) { }
+  constructor(private authSvc: AuthService ) { }
 
   ngOnInit() {
   }
-
-  onLogout(){
-    console.log('Logout!');
-    this.afAuth.auth.signOut(); 
-    this.google.disconnect(); 
-    this.router.navigateByUrl('/login');
-  }
+  
 }

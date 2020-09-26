@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+
 
 @Component({
   selector: 'app-video',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoPage implements OnInit {
 
-  constructor() { }
+
+  constructor(private authSvc: AuthService) { }
 
   ngOnInit() {
   }
-
+  
 }

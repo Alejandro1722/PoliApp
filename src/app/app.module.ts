@@ -9,9 +9,14 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth'; 
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
 import { environment } from './../environments/environment'; 
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { Facebook } from '@ionic-native/facebook/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,11 +26,14 @@ import { GooglePlus } from '@ionic-native/google-plus/ngx';
     IonicModule.forRoot(),
     AppRoutingModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
-
+    AngularFireAuthModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AngularFireStorageModule
   ],
   providers: [
-    GooglePlus, 
+    Facebook,
+    GooglePlus,
+    InAppBrowser, 
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
